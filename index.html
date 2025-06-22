@@ -69,7 +69,7 @@
   <div class="hotspot" onclick="startGame()"></div>
   </div>
   <div id="intro" class="screen" style="background-image: url('images/intro.jpg');">
-    <div id="permissionTip">請點擊允許「裝置方向存取」以啟用搖晃控制</div>
+    <div id="permissionTip">Please allow device orientation access to enable tilt control.</div>
     <div class="hotspot" onclick="showScreen('K1Transition')"></div>
   </div>
   <div id="gameCanvasContainer" class="screen">
@@ -273,10 +273,10 @@
       if (currentFood?.image?.complete) ctx.drawImage(currentFood.image, currentFood.x, currentFood.y, currentFood.size, currentFood.size);
       ctx.font = "bold 24px sans-serif";
       ctx.fillStyle = "black";
-      ctx.fillText(`關卡 ${level} 分數:${score}`, 10, 40);
+      ctx.fillText(`Level ${level} Score:${score}`, 10, 40);
       // 顯示右上角倒數計時
       ctx.textAlign = "right";
-      ctx.fillText(`剩餘時間: ${timeLeft}s`, canvas.width - 10, 40);
+      ctx.fillText(`TimeLeft: ${timeLeft}s`, canvas.width - 10, 40);
       ctx.textAlign = "left"; // 恢復原本對齊方式
     }
 
@@ -321,7 +321,7 @@
       setTimeout(() => {
         document.getElementById("scoreResult").innerHTML = `
           <div style="font-size: 60px; color: red; font-weight: bold; text-shadow: 2px 2px 4px white; margin-bottom: 100px;">
-            ${score} 分！
+            ${score}！
           </div>`;
       }, 800);
     }
