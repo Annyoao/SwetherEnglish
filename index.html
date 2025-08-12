@@ -120,7 +120,7 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const basket = { x: canvas.width / 2 - 40, y: canvas.height - 50, width: 80, height: 20 };
+    const basket = { x: canvas.width / 2 - 40, y: canvas.height - 100, width: 80, height: 20 };
     let currentFood = null;
     let foodQueue = [], score = 0, level = 1;
     let stats = { 1: { good: 0, bad: 0 }, 2: { good: 0, bad: 0 }, 3: { good: 0, bad: 0 } };
@@ -208,7 +208,7 @@
           image: img,
           x: Math.random() * (canvas.width - 80),
           y: 0,
-          size: 80,
+          size: 110,
           speed: 3
         };
       };
