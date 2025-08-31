@@ -216,11 +216,15 @@
     }
 
     function isColliding(food, basket) {
+      const marginX = 15; // 左右縮小 15px
+      const foodBottom = food.y + food.size;
+      const foodCenterX = food.x + food.size / 2;
       return (
-        food.x < basket.x + basket.width &&
-        food.x + food.size > basket.x &&
-        food.y < basket.y + basket.height &&
-        food.y + food.size > basket.y
+        // 食物的底邊必須「超過」盤子上緣
+        foodBottom >= basket.y &&
+        // 食物中心點要在盤子寬度內（收窄後）
+        foodCenterX > basket.x + marginX &&
+        foodCenterX < basket.x + basket.width - marginX
       );
     }
 
